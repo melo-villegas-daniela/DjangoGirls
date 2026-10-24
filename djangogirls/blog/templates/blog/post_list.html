@@ -8,31 +8,21 @@
     
 <body>
     <div>
-        <hi><a href="/">Django Girls Blog</a></hi>
+        <h1><a href="/">Django Girls Blog</a></h1>
     </div>
 
+    {% for post in posts %}
+
     <div>
-        <p>publicado: 14.06.2014, 12:14</p>
-        <h2><a href=""> Mi primer post</a></h2>
+        <p>publicado: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.titulo }}</a></h2>
+        <h3>Tipo: {{ post.tipo }}</h3>
+        <h3>Duracion: {{ post.duracion }}</h3>
         <p>
-            Aenean eu leo quam. Pellentesque ornare sem lacinia 
-            quam venenatis vestibulum. Donec id elit non mi 
-            porta gravida at eget metus. Fusce dapibus, tellus 
-            ac cursus commodo, tortor mauris condimentum nibh, 
-            ut fermentum massa justo sit amet risus.
+           {{ post.texto|linebreaksbr }}
         </p>
     </div>
 
-    <div>
-        <p>publicado: 15.06.2014, 12:35</p>
-        <h2><a href=""> Mi segundo post</a></h2>
-        <p>
-            Aenean eu leo quam. Pellentesque ornare sem lacinia 
-            quam venenatis vestibulum. Donec id elit non mi 
-            porta gravida at eget metus. Fusce dapibus, tellus 
-            ac cursus commodo, tortor mauris condimentum nibh, 
-            ut fermentum massa justo sit amet risus.
-        </p>
-    </div>
+  
 </body>
 </html>
